@@ -1,0 +1,24 @@
+Passwordless SSH Connecction
+
+IN worker
+
+Generate the password in worker [sudo passwd ubuntu]
+# in public key authentication [sudo vim /etc/ssh/sshd_config]
+Remove # before [ public key authentication ]
+restart service [sudo service ssh restart]
+
+IN Master
+
+Generate keys in Master node [ssh-keygen -t rsa]
+change the directory to [cd .ssh] (move to id_rsa.pub)
+copy the key of id_rsa.pub in Master and paste it in worker  [cd .ssh ---> vi authorized_key]
+Restart service [sudo service ssh restart]
+
+
+IN worker
+
+paste it in worker  [cd .ssh ---> vi authorized_key]
+
+IN Master
+
+[ssh (private ip of workers) ]
