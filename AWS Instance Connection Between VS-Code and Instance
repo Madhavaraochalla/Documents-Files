@@ -1,0 +1,24 @@
+  Host Google
+    HostName ec2-18-144-51-161
+    IdentityFile C:\Users\gogul\Downloads\Prokopto.pem
+    User ubuntu
+# By AWS
+
+Host aws-server
+    HostName 13.56.138.75
+    User ubuntu
+    IdentityFile C:\Users\gogul\Downloads\Prokopto.pem
+# right one
+
+
+
+# not working
+
+
+
+Host aws-server-New
+    HostName 3.101.113.208
+    User ubuntu
+    IdentityFile C:\Users\gogul\Downloads\Prokopto.pem
+
+
